@@ -1,5 +1,4 @@
 let c = (s)=>document.querySelector(s);
-let cs = (s)=>document.querySelectorAll(s);
 
 const form = document.forms.list;
 
