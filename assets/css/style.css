@@ -1,65 +1,180 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
     box-sizing: border-box;
-    outline: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+body { 
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
     display: flex;
     justify-content: center;
-    background-color: rgb(65, 169, 218);
 }
 
-.container {
-    height: 100%;
-    min-height: 300px;
-    width: 600px;
-    margin-top: 50px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+div.container {
+    height: 40%;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 30vh;
 }
 
-h1 {
+section.title h1 {
+    font-size: 55px;
     text-align: center;
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
-.form {
+section.form {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    margin-top: 11px;
 }
 
-form {
-    width: 50%;
-    margin: 0;
-    padding: 0;
+div.time {
+    display: flex;
+    height: 35px;
+    width: 450px;
+    flex-direction: row;
 }
 
 #input, #submit {
-    width: 100%;
+    width: 80%;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
+input#time {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-left: 5px;
+}
+
 #submit {
     text-align: center;
     width: 80%;
-    margin-top:10px;
-    margin-left: 30px;
+    margin-top:20px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(18, 90, 18);
+    font-family: 'Bebas Neue', cursive;
     background-color: rgb(75, 209, 75);
 }
 
-.list {
-    margin-top: 20px;
-    margin-left: 30px;
+#submit:hover {
+    cursor: pointer;
 }
 
-.list li {
-    font-size: 23px;
-    font-weight: bold;
+section.subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 7%;
+    width: 50%;
+    padding: 0 10px;
+    transition: 300ms ease;
+    border-bottom-left-radius: 5px;
+}
+
+section.subtitle h2 {
+    font-size: 27px;
     color: red;
+}
+
+section.subtitle button {
+    padding: 7px;
+    border: 1px solid #ccc;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 17px;
+}
+
+section.subtitle button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+div.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+
+section.task {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    height: 160px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: #000  1px 1px 4px 1px; 
+}
+
+div.pomodoro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 3px;
+}
+
+div.pomodoro p, div.pomodoro span {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+div.yourTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.yourTask h3 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 28px;
+}
+
+div.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 2px;
+}
+
+button#pomodoro, button#remove {
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button#pomodoro:hover {
+    cursor: pointer;
+    color: rgb(11, 61, 17);
+    background-color: rgb(4, 160, 4);
+}
+
+button#remove:hover {
+    cursor: pointer;
+    color: rgb(138, 20, 20);
+    background-color: red;
 }

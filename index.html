@@ -6,25 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>Lista de Tarefas</h1>
+    <header>
+        <div class="container">
+            <section class="title">
+                <h1>Lista de<br/> Tarefas</h1>
+            </section>
+            <section class="form">
+                <form method="post" name="list">
+                    <div class="time">
+                        <input id="input" type="text" name="add" autocapitalize="off" onfocus="this.value=''"  placeholder="Adicione Sua Tarefa" autocomplete="off">
+                        <input id="time" type="time" name="time" onfocus="this.value=''"  placeholder="Adicionar Horário">
+                    </div>
+                    <button id="submit" type="submit">Adicionar</button>
+                </form>
+            </section>
         </div>
-        <div class="form">
-            <form method="post" name="list">
-                <input id="input" type="text" name="add"  placeholder="Adicione Sua Tarefa">
-                <button id="submit" type="submit">Adicionar</button>
-            </form>
-        </div>
+    </header>
+    <main>
+        <section class="subtitle">
+            <h2>Suas Tarefas:</h2>
+            <Button>Apagar Todas As Tarefas</Button>
+        </section>
         <div class="list">
-            <ul id="ul"></ul>
         </div>
-    </div>
+    </main>
+<script src="assets/js/script.js"></script>
 <script src="assets/js/index.js"></script>
 </body>
 </html>
