@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Lista de tarefas</title>
 </head>
@@ -19,12 +19,33 @@
             <section class="form">
                 <form method="post" name="list">
                     <div class="time">
-                        <input id="input" type="text" name="add" autocapitalize="off" onfocus="this.value=''"  placeholder="Adicione Sua Tarefa" autocomplete="off">
-                        <input id="time" type="time" name="time" onfocus="this.value=''"  placeholder="Adicionar Horário">
+                        <label>
+                            <p id="title">Adicione Sua Tarefa:<br/></p>  
+                            <input id="input" type="text" name="add" autocapitalize="off" onfocus="this.value=''" autocomplete="off">
+                        </label>
+                        <label>
+                            <p id="hour">Horário:<br/></p>
+                            <input id="time" type="time" name="time" onfocus="this.value=''">
+                        </label>
                     </div>
                     <button id="submit" type="submit">Adicionar</button>
                 </form>
             </section>
+            <div class="models">
+                <section class="task">
+                    <div class="pomodoro">
+                        <p>POMODORO:</p>
+                        <span>00:00:00</span>
+                    </div>
+                    <div class="yourTask">
+                        <h3></h3>
+                    </div>
+                    <div class="buttons">
+                        <button id="pomodoro">Iniciar Pomodoro</button>
+                        <button id="remove">Apagar</button>
+                    </div>
+                </section>
+            </div>
         </div>
     </header>
     <main>
@@ -35,7 +56,6 @@
         <div class="list">
         </div>
     </main>
-<script src="assets/js/script.js"></script>
 <script src="assets/js/index.js"></script>
 </body>
 </html>

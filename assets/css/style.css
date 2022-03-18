@@ -46,19 +46,34 @@ section.form {
 
 div.time {
     display: flex;
-    height: 35px;
+    justify-content: space-between;
+    height: 55px;
     width: 450px;
     flex-direction: row;
+    margin-top: 5px;
 }
 
-#input, #submit {
-    width: 80%;
-    padding: 5px;
+label p#title {
+    margin-left: 5px;
+    color: red;
+    font-family: 'Pacifico', cursive;
+}
+
+label p#hour {
+    text-align: center;
+    color: red;
+    font-family: 'Pacifico', cursive;
+}
+
+input#input, #submit {
+    width: 365px;
+    padding: 7px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
 input#time {
+    width: 90%;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
@@ -71,7 +86,7 @@ input#time {
     margin-top:20px;
     margin-left: 40px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
     color: rgb(18, 90, 18);
     font-family: 'Bebas Neue', cursive;
     background-color: rgb(75, 209, 75);
@@ -79,6 +94,10 @@ input#time {
 
 #submit:hover {
     cursor: pointer;
+}
+
+div.models {
+    display: none;
 }
 
 section.subtitle {
