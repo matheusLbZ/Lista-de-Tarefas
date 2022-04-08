@@ -197,3 +197,7 @@ button#remove:hover {
     color: rgb(138, 20, 20);
     background-color: red;
 }
+
+.subtitle-background {
+    background-color: bisque;
+}

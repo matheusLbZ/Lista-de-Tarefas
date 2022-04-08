@@ -7,31 +7,31 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     const { add, time } = form;
-    let result = add.value;
-    let resultTime = time.value;
 
-    if(!result ||!resultTime) {
-        return alert("Por Favor! Ensira a Tarefa e o Horário que você deseja executa-la!");
+    if(!add.value ||!time.value) {
+        return alert("Tente Novamente!");
     } else {
-        cloneTasks(result, resultTime);
+        cloneTasks(add, time);
+        clearInput(add, time);
     };
 });
 
-function scrollTask() {
-    window.addEventListener('scroll', ()=> {
-        if(window.scrollY > 0) {
-            c('.subtitle').style.backgroundColor = "bisque";
-        } else {
-            c('.subtitle').style.backgroundColor = "transparent";
-        }
-    })
-}
-scrollTask();
+window.addEventListener('scroll', ()=> {
+    c('.subtitle').classList.toggle('subtitle-background', window.scrollY > 0);
+})
 
-function cloneTasks(result, resultTime) {
+function cloneTasks(add, time) {
     let clone = c('section.task').cloneNode(true);
 
-    clone.querySelector('div.yourTask h3').append(`Às ${resultTime}: ${result}`);
+    clone.querySelector('div.yourTask h3').append(`Às ${time.value}: ${add.value}`);
 
     c('main div.list').appendChild(clone);
 };
+
+function clearInput(add, time) {
+    add.value = '';
+    add.focus();
+
+    time.value = '';
+    time.focus();
+}
